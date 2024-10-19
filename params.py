@@ -23,6 +23,11 @@ BACKUP_DIR = r'<REPLACE WITH YOUR OWN>'
 # LIGHTS_FOLDER_NAME = "lights"
 LIGHTS_FOLDER_NAME = "lights"
 
+# Name you use to store all temp files while processing
+# Example :
+# PROCESSED_FOLDER_NAME = "processed"
+PROCESSED_FOLDER_NAME = "processed"
+
 # The files you do not want to keep when your processing is done
 # They will be deleted from WORK_DIR only (not from Seetar)
 DELETE_FROM_EVERYWHERE = ["*.lst","*.seq", "*.txt","process*/*.fit", "*_thn.jpg"]

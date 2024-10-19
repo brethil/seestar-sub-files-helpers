@@ -16,6 +16,10 @@ delta_folders = [x for x in src_folders if (x not in dst_folders and not x.endsw
 for d in delta_folders:
     new_folder = dst_path / d
     new_folder.mkdir()
+    new_light_folder = new_folder / params.LIGHTS_FOLDER_NAME
+    new_light_folder.mkdir()
+    new_processed_folder = new_folder / params.PROCESSED_FOLDER_NAME
+    new_processed_folder.mkdir()
 
 # File copy
 for d in src_path.iterdir():
