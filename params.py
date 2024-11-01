@@ -4,19 +4,19 @@
 # (The r before the path is important)
 # Examples :
 # SEESTAR_DIR = r'D:\MyWorks'
-SEESTAR_DIR = r'<REPLACE WITH YOUR OWN>'
+SEESTAR_DIR = r'D:\MyWorks'
 
 # Your local (on your computer) work folder
 # (The r before the path is important)
 # Example :
 # WORK_DIR = r'F:\Seestar_Data\MyWorks'
-WORK_DIR = r'<REPLACE WITH YOUR OWN>'
+WORK_DIR = r'F:\Seestar_Data\MyWorks'
 
 # For the backup script, your back-up destination (here a Google drive folder)
 # (The r before the path is important)
 # Example :
 # BACKUP_DIR = r'G:\Autres ordinateurs\USB et périphériques externes\Seestar\MyWorks'
-BACKUP_DIR = r'<REPLACE WITH YOUR OWN>'
+BACKUP_DIR = r'G:\Autres ordinateurs\USB et périphériques externes\Seestar\MyWorks'
 
 # Name you use to store all your sub fits files before processing
 # Example :
