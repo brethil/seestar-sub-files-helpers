@@ -3,39 +3,45 @@
 # Your Seestar MyWorks folder
 # (The r before the path is important)
 # Examples :
-# SEESTAR_DIR = r'D:\MyWorks'
-SEESTAR_DIR = r'D:\MyWorks'
+# SEESTAR_DIR = r'F:\MyWorks'
+SEESTAR_DIR = r'<REPLACE WITH YOUR OWN>'
 
 # Your local (on your computer) work folder
 # (The r before the path is important)
 # Example :
-# WORK_DIR = r'F:\Seestar_Data\MyWorks'
-WORK_DIR = r'F:\Seestar_Data\MyWorks'
+# WORK_DIR = r'D:\Seestar_Data\MyWorks'
+WORK_DIR = r'<REPLACE WITH YOUR OWN>'
 
 # For the backup script, your back-up destination (here a Google drive folder)
 # (The r before the path is important)
 # Example :
 # BACKUP_DIR = r'G:\Autres ordinateurs\USB et périphériques externes\Seestar\MyWorks'
-BACKUP_DIR = r'G:\Autres ordinateurs\USB et périphériques externes\Seestar\MyWorks'
+BACKUP_DIR = r'<REPLACE WITH YOUR OWN>'
 
 # Name you use to store all your sub fits files before processing
 # Example :
 # LIGHTS_FOLDER_NAME = "lights"
 LIGHTS_FOLDER_NAME = "lights"
 
+# If you want an empty process folder created for you each time you import data.
+# If you use a script that creates it like Naztronomy in Siril, better set this to False
+# Example :
+# CREATE_PROCESS_FOLDER = True
+CREATE_PROCESS_FOLDER = False
+
 # Name you use to store all temp files while processing
 # Example :
-# PROCESSED_FOLDER_NAME = "processed"
-PROCESSED_FOLDER_NAME = "processed"
+# PROCESSED_FOLDER_NAME = "process"
+PROCESS_FOLDER_NAME = "process"
 
 # The files you do not want to keep when your processing is done
-# They will be deleted from WORK_DIR only (not from Seetar)
-DELETE_FROM_EVERYWHERE = ["*.lst","*.seq", "*.txt","process*/*.fit", "*_thn.jpg"]
+# They will be deleted from WORK_DIR only (not from Seestar)
+DELETE_FROM_EVERYWHERE = ["*.lst","*.seq","*.txt","process*/*.fit","*_thn.jpg"]
 
-# The files you want to remove from OBJECT-sub directories only
-# They will be deleted from WORK_DIR only (not from Seetar)
+# The files you want to remove from OBJECT_sub directories only
+# They will be deleted from WORK_DIR only (not from Seestar)
 DELETE_FROM_SUB_FOLDERS = ["*.jpg"]
 
 # The files you want to remove from OBJECT directories only
-# They will be deleted from WORK_DIR only (not from Seetar)
+# They will be deleted from WORK_DIR only (not from Seestar)
 DELETE_FROM_OBJECT_FOLDERS = []

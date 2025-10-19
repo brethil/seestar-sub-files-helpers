@@ -1,4 +1,4 @@
-""" Move all local 'OBJ-sub' folder to 'OBJ/lights' folder """
+""" Move all local 'OBJ-sub' folder to 'OBJ/lights' folders """
 
 from pathlib import Path
 import params
@@ -9,8 +9,8 @@ parent_path = Path(params.WORK_DIR)
 for d in parent_path.iterdir():
     current_dir = Path(d)
 
-    if d.name.endswith("-sub"):
-        current_object = current_dir.name.replace("-sub","")
+    if d.name.endswith("_sub"):
+        current_object = current_dir.name.replace("_sub","")
         dst_folder =  f"{parent_path}/{current_object}/{params.LIGHTS_FOLDER_NAME}"
         dst_path = Path(dst_folder)
 
