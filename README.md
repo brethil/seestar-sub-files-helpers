@@ -2,9 +2,10 @@
 
 Some Python helper scripts to ease file manipulation for Seestar S50 processing
 
-All these scripts (except exposure_time.py that requires astropy) should work with python 3.8 or above.  
+All these scripts (except exposure_time.py that requires [astropy](https://docs.astropy.org/en/stable/install.html) and [prettytable](https://pypi.org/project/prettytable/)) should work with python 3.8 or above and no have no dependencies, it's all basic Python.
+
 They have been tested on Windows 10/11 only for now but they should be system-agnostic.  
-No dependencies: it's all basic plain Python.
+
 
 ## What for ?
 
@@ -35,9 +36,11 @@ MyWorkDir
 ...
 ```
 
-I wanted to clean up my work worker to save up some disk space and automate file copying to add only new .fits files from Seestar into my work folder.  
-I also wanted to get the total time of exposure on a specific object.  
-And of course to generate a backup file for my subs, with a zip file by object, better safe than sorry !
+I wanted : 
+- To clean up my work worker to save up some disk space 
+- To automate file copying to add only new .fits files from Seestar into my work folder  
+- To get the total time of exposure and some other datas on a specific object  
+- To generate a backup file for my subs, with a zip file by object, better safe than sorry !
 
 **These scripts does not delete anything from the Seestar, just from your local work folder**
 
@@ -52,10 +55,10 @@ To get the folder structure I wanted.
 
 Now I just run :
 
-- import.py after a Seestar session,
+- import.py after each Seestar session,
 - cleanup.py when my processing is done and my stacked images saved back in the object folder.
 - backup.py when needed
-- exposure_time.py to see what object deserves a new stacking
+- exposure_time.py to see what object deserves a new stacking and what Messier Object to shoot next :blush:
 
 ## Set you up
 
@@ -80,11 +83,11 @@ BACKUP_DIR = r'<REPLACE WITH YOUR OWN>'
 
 **Remove unwanted files from your work folder**  
 If you local work folder is a copy of your Seestar MyWorks folder, you can run this one first.
-You might want to edit these variables from params.py to match you own needs :
+You might want to edit these variables from `params.py` to match you own needs :
 
 - DELETE_FROM_EVERYWHERE, -> you don't want these, nowhere
-- DELETE_FROM_SUB_FOLDERS, -> you don't want them in -sub folders
-- DELETE_FROM_OBJECT_FOLDERS -> you don't want them in a Object folder at root level
+- DELETE_FROM_SUB_FOLDERS, -> you don't want them in _sub folders
+- DELETE_FROM_OBJECT_FOLDERS -> you don't want them in a object folder at root level
 
 ```
 python cleanup.py
@@ -92,7 +95,7 @@ python cleanup.py
 
 ### move_to_light.py
 
-**Move data from _sub folder to OBJ/lights folder and remove _sub (from local work folder only)**
+**Move data from _sub folder to Object/lights folder and remove _sub (from local work folder only)**
 
 ```
 python move_to_light.py
@@ -100,8 +103,10 @@ python move_to_light.py
 
 ### import.py
 
-**Imports only new fit files from Seestar to OBJ/lights folder**
-When your initial clean up is done, this is the way to add your new subs only.
+**Imports only new fit files from Seestar to Object/lights folder**
+When your initial clean up is done, this is the way to add your new subs only to your Object/lights folder.
+
+Note : I usually destroy all _sub folder from Seestar after this step.
 
 ```
 python import.py
@@ -121,6 +126,7 @@ python backup.py
 
 Create a console print and a json containing these datas :
 
+```
 +-------------------+------------------------+--------------------+----------------+-----------------+-------------+
 | Object name       | Exposure Time (alt-az) | Exposure Time (EQ) | Number of subs | Filters         | Folder size |
 +-------------------+------------------------+--------------------+----------------+-----------------+-------------+
@@ -132,6 +138,7 @@ Create a console print and a json containing these datas :
 | M 27              |          0:28          |        0:28        |            243 | ['LP']          |    962.4 MB |
 | M 13              |          0:28          |        0:31        |            243 | ['IRCUT', 'LP'] |    962.4 MB |
 +-------------------+------------------------+--------------------+----------------+-----------------+-------------+
+```
 
 exposure_time.json
 ```
