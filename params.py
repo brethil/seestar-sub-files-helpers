@@ -31,7 +31,7 @@ CREATE_PROCESS_FOLDER = False
 
 # Name you use to store all temp files while processing
 # Example :
-# PROCESSED_FOLDER_NAME = "process"
+# PROCESS_FOLDER_NAME = "process"
 PROCESS_FOLDER_NAME = "process"
 
 # The files you do not want to keep when your processing is done

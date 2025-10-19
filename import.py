@@ -19,8 +19,8 @@ for d in delta_folders:
     new_light_folder = new_folder / params.LIGHTS_FOLDER_NAME
     new_light_folder.mkdir()
     if params.CREATE_PROCESS_FOLDER :
-        new_processed_folder = new_folder / params.PROCESSED_FOLDER_NAME
-        new_processed_folder.mkdir()
+        new_process_folder = new_folder / params.PROCESS_FOLDER_NAME
+        new_process_folder.mkdir()
 
 # File copy
 for d in src_path.iterdir():

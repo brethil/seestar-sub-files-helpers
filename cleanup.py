@@ -11,9 +11,6 @@ import params
 import common
 
 
-
-
-
 work_path = Path(params.WORK_DIR)
 folder_size_before = common.get_folder_size(work_path)
 
@@ -27,11 +24,11 @@ for d in work_path.iterdir():
     else:
         common.delete_all(current_dir, params.DELETE_FROM_OBJECT_FOLDERS)
     for p in current_dir.iterdir():
-        if p.name.endswith(params.PROCESSED_FOLDER_NAME) :
-            processed_folder = Path(p)
+        if p.name.endswith(params.PROCESS_FOLDER_NAME) :
+            process_folder = Path(p)
             if params.CREATE_PROCESS_FOLDER == False:
-                if common.dir_is_empty(processed_folder):
-                    common.rm_tree(processed_folder)
+                if common.dir_is_empty(process_folder):
+                    common.rm_tree(process_folder)
 
 folder_size_after = common.get_folder_size(work_path)
 
